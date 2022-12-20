@@ -2,20 +2,20 @@ apiVersion: batch/v1
 kind: CronJob
 metadata:
   creationTimestamp: null
-  name: testjob
+  name: chtest
 spec:
   jobTemplate:
     metadata:
       creationTimestamp: null
-      name: testjob
+      name: chtest
     spec:
       template:
         metadata:
           creationTimestamp: null
         spec:
           containers:
-          - image: testjob
-            name: testjob
+          - image: chtest_chuucar
+            name: chtest
             resources: {}
           restartPolicy: OnFailure
   schedule: '* * * * *'
